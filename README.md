@@ -1,2 +1,2 @@
-![ALT Text](imagem-1.png)
-![ALT Text](imagem-2.png)
+![ALT Text](imagem-1.jpg)
+![ALT Text](imagem-2.jpg)
