@@ -1,0 +1,586 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400;1,500&display=swap');
+
+/* Estilo geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #cfc7c7b6;
+    height: 100vh;
+
+}
+
+.logo img {
+    width: 6rem;
+    height: 6rem;
+    margin-top: -10px;
+
+    /*box-shadow: 0px 0px 8px rgba(243, 243, 243, 0.788);*/
+
+}
+
+
+.interface {
+    max-width: 2560px;
+
+}
+
+.flex {
+    display: flex;
+    padding-left: 100px;
+
+}
+
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #ee1010;
+    border-radius: 15px;
+    border: 0;
+    cursor: pointer;
+    color: #FFFF;
+}
+
+.btn-contato button:hover {
+    color: #fdfcfc;
+    transform: scale(1.05);
+}
+
+/* Estilo Header */
+header {
+    padding: 0 3%;
+    background-color: #fff;
+
+}
+
+header>.interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 40px;
+    position: relative;
+    font-size: 24px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    position: relative;
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ee1010; /* Cor do traço */
+    left: 50%;
+    bottom: -5px; /* Ajuste a posição vertical do traço */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+header nav ul li:hover a::after {
+    width: 100%;
+    left: 0;
+}
+
+header nav ul li:hover {
+    transform: scale(1.05);
+    color: #0e0d0d;
+}
+
+
+
+/* Estilo Topo do Site */
+
+section .topo-do-site {
+    padding: 40px 10%;
+}
+
+section.topo-do-site .flex {
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+
+
+.topo-do-site h1 {
+    color: #050505;
+    font-size: 28px;
+    line-height: 40px;
+
+}
+
+/* Estilização do botão Voltar ao Topo */
+#btnVoltarTopo {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    width: 68px;
+    height: 73px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: transparent;
+    /* Alteração aqui */
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+
+
+
+#btnVoltarTopo i {
+    font-size: 60px;
+    color: rgb(134, 132, 132);
+    margin-bottom: 20px;
+}
+
+.topo-do-site .txt-topo-site p {
+    color: #0a0a0a;
+    margin: 60px 0;
+    line-height: 20px;
+}
+
+.topo-do-site .img-topo-site img {
+    position: relative;
+    margin-top: 120px;
+    width: 60rem;
+    /*animation: flutuar 2s ease-in-out infinite alternate;*/
+
+}
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 30px
+    }
+}
+
+
+/* Estilo das luzes */
+.luz {
+    /*position: relative;
+    width: 65%;
+    height: 70%;
+    background: radial-gradient(circle, rgba(126, 141, 151, 0.8) 10%, rgba(255, 255, 255, 0) 90%);
+    animation: mudarCores 3s linear infinite; /* Define a animação */
+}
+
+
+/* Definindo a animação */
+@keyframes mudarCores {
+
+    100% {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    50% {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+
+}
+
+
+
+
+
+
+/*Estilo das especialidades*/
+
+
+
+h2.titulo {
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    text-align: center;
+    margin-top: 200px;
+}
+
+section.especialidades .especialidades-box img{
+    width: 20rem;
+}
+
+section.especialidades .especialidades-box {
+    margin-bottom: 120px;
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+/*efeito de sombra nas caixas*/
+section.especialidades .especialidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff0000;
+}
+
+/*gap apicando a distancia entre as caixas com bordas*/
+section.especialidades .flex {
+    gap: 100px;
+}
+
+section.especialidades .especialidades-box h3 {
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+section.especialidades .especialidades-box p {
+    color: rgb(255, 255, 255);
+
+
+}
+
+section.especialidades {
+    padding: 40px 4%;
+
+}
+
+
+
+section.especialidades .especialidades-box i {
+    font-size: 58px;
+    color: #ff0000;
+}
+
+
+
+/*Estilo Sobre*/
+
+section.sobre {
+    padding: 40px 4%;
+    margin-bottom: 120px;
+
+}
+
+section.sobre .txt-sobre {
+    color: #fff;
+    margin-bottom: 100px;
+
+}
+
+section.sobre .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+/*light-height aproxima os textos */
+section.sobre .txt-sobre h2 {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+
+
+}
+
+
+section.sobre .txt-sobre p {
+    margin: 15px 0;
+    text-align: justify;
+
+}
+
+.img-sobre img {
+    margin-top: 50px;
+    width: 20rem;
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #ee1010;
+    border-radius: 20px;
+    color: #00FF08;
+
+}
+
+section.sobre .txt-sobre .btn-social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #FFFF;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    margin: 0 10px;
+    margin-top: 50px;
+}
+
+.btn-social button:hover {
+    color: #fdfcfc;
+    transform: scale(1.05);
+}
+
+/* Estilo do portfólio*/
+
+section.portfolio {
+
+    padding: 5px 2%;
+    box-shadow: 0 0 40px 10px #ffffff1c;
+
+}
+
+.img-port {
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 5s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+    margin: auto;
+
+}
+
+/*gap para distanciar a area de retangulo ou justify-contet-space-aroud*/
+section.portfolio .flex {
+    gap: 100px;
+    display: flex;
+    justify-content: center;
+    /* Centralizar horizontalmente */
+    align-items: center;
+    /* Centralizar verticalmente */
+
+}
+
+
+.img-port:hover {
+    background-position: 100% 100%;
+}
+
+section.portfolio .interface h2 {
+    margin-bottom: 40px;
+}
+
+/*overlay faz a rolagem escurece a cor*/
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1c1d1c9c;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+    transition: 1.5s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+/*Estilo Formulario */
+
+section.formulario {
+    margin-top: 80px;
+    padding: 1px 2%;
+
+
+}
+
+/*use o margin 0 auto para centralizar o formulario*/
+form {
+
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 125px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    background-color: #242222;
+    border: none;
+    outline: none;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+/*resize não deixa o textarea ser redimensionado*/
+form textarea {
+    resize: none;
+    max-height: 200px;
+}
+
+form .btn-enviar {
+    margin-top: 15px;
+    text-align: center;
+}
+
+form .btn-enviar input {
+    width: 120px;
+    background-color: #ee1010;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+form .btn-enviar input:hover {
+    box-shadow: 0px 0px 8px #1b1b1b;
+    transform: scale(1.05);
+
+}
+
+/*rodapé*/
+footer .interface {
+    margin-top: 50px;
+}
+
+footer .interface .line-footer hr {
+    color: red;
+}
+
+/*deixando responsivo*/
+* Estilo geral */ @media only screen and (max-width: 768px) {
+
+    /* Ajustes para telas menores */
+    body {
+        font-size: 14px;
+
+    }
+
+
+    header .logo img {
+        width: 8rem;
+        /* Reduzir o tamanho do logo */
+    }
+
+    header nav ul li {
+        padding: 0 20px;
+    
+        /* Reduzir o espaçamento entre os itens do menu */
+    }
+
+    section.topo-do-site .flex {
+        flex-direction: column;
+        /* Mudar a direção dos elementos */
+        align-items: center;
+        text-align: center;
+    }
+
+    .img-topo-site img {
+        width: 200px;
+        /* Reduzir o tamanho da imagem */
+    }
+
+    .especialidades .flex {
+        flex-direction: column;
+        /* Mudar a direção dos elementos */
+        align-items: center;
+        text-align: center;
+    }
+
+    .especialidades-box {
+        width: 80%;
+        /* Reduzir a largura das caixas de especialidades */
+    }
+
+    .img-sobre img {
+        width: 250px;
+        /* Reduzir o tamanho da imagem */
+    }
+
+    .btn-social button {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .flex {
+        flex-direction: column;
+        /* Mudar a direção dos elementos */
+        align-items: center;
+        text-align: center;
+    }
+
+    .img-port {
+        width: 80%;
+        /* Reduzir a largura das imagens do portfólio */
+        height: auto;
+    }
+
+    form {
+        max-width: 90%;
+        /* Reduzir a largura do formulário */
+    }
+
+    form input,
+    form textarea {
+        padding: 15px 10px;
+        /* Reduzir o preenchimento dos inputs */
+        font-size: 16px;
+        /* Reduzir o tamanho da fonte */
+    }
+
+    form .btn-enviar input {
+        width: 100%;
+        /* Preencher toda a largura do botão */
+    }
+}
+
+
+@media only screen and (min-width: 2560px) {
+    .interface {
+        margin: 0 auto;
+        /* Centraliza a interface na tela */
+        padding-left: 0;
+        /* Remove o padding esquerdo da interface para centralizar conteúdos */
+    }
+
+    section.topo-do-site .flex,
+    section.especialidades .flex,
+    section.sobre .flex,
+    section.portfolio .flex {
+        padding-left: 0;
+        /* Remove o padding esquerdo dos contêineres flexíveis para centralizar os elementos */
+    }
+}
+Footer
+© 2024 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact
+Manage cookies
+Do not share my personal information
