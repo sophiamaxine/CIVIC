@@ -24,15 +24,20 @@ jobs:
         with:
           node-version: '14'
 
+      - name: Change directory
+        run: cd app
+
       - name: Install dependencies
         run: npm install
+        working-directory: app
 
       - name: Run tests
         run: npm test
+        working-directory: app
 
   build:
     runs-on: ubuntu-latest
-    needs: test  # Ensure tests pass before building
+    needs: test
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -41,16 +46,21 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '14'
+
+      - name: Change directory
+        run: cd app
 
       - name: Install dependencies
         run: npm install
+        working-directory: app
 
       - name: Build the application
         run: npm run build
+        working-directory: app
 
   deploy:
     runs-on: ubuntu-latest
-    needs: build  # Ensure build is successful before deploying
+    needs: build
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -60,8 +70,12 @@ jobs:
         with:
           node-version: '14'
 
+      - name: Change directory
+        run: cd app
+
       - name: Build the application (for deployment)
         run: npm run build
+        working-directory: app
 
       - name: Deploy to Azure Static Web Apps
         uses: Azure/static-web-apps-deploy@v1
@@ -69,6 +83,6 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.PAT_TOKEN }}
           repo_token: ${{ secrets.PAT_TOKEN }}
           action: 'upload'
-          app_location: '/'  # Path to your app
-          api_location: 'api'  # Path to your API, adjust if needed
+          app_location: '/'  # Adjust if necessary
+          api_location: 'api'  # Adjust if necessary
           output_location: 'build'
