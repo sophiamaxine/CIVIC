@@ -1,15 +1,16 @@
 {
-  "name": "my-project",
+  "name": "civic",
   "version": "1.0.0",
+  "description": "CIVIC application",
   "scripts": {
-  "build": "webpack",  // Adjust based on your build tool
-  "test": "jest"       // Adjust based on your testing framework
-}
+    "build": "webpack",  // Adjust based on your build tool
+    "test": "jest"       // Adjust based on your testing framework
+  },
   "dependencies": {
-    "html-minifier-terser": "^6.0.0",  // Minifies HTML
-    "clean-css": "^5.2.0"               // Minifies CSS
+    "express": "^4.17.1" // Example dependency
   },
   "devDependencies": {
-    "prettier": "^2.7.1"  // Code formatter for HTML/CSS
+    "webpack": "^5.38.1", // Example dev dependency
+    "jest": "^26.6.3"     // Example test dependency
   }
 }
