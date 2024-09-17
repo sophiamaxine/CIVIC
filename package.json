@@ -1,15 +1,11 @@
 {
-  "name": "my-project",
+  "name": "example-project",
   "version": "1.0.0",
-  "description": "A description of my project",
+  "description": "Example project to test npm ci",
   "main": "index.js",
   "scripts": {
-    "test": "jest"  // Replace with your test command, e.g., "mocha", "vitest", etc.
+    "test": "echo \"No tests specified\" && exit 0"
   },
-  "dependencies": {
-    "express": "^4.17.1"  // Example dependency
-  },
-  "devDependencies": {
-    "jest": "^28.0.0"  // Example testing framework
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }
