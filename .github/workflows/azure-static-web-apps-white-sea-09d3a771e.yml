@@ -10,7 +10,8 @@ on:
       - main
 
 permissions:
-  contents: write  # This grants write permissions to the contents of the repository
+  contents: write
+  workflows: write  # This grants permissions to modify workflow files
 
 jobs:
   format:
@@ -37,8 +38,7 @@ jobs:
           add: '**/*.yml'
           message: 'fix: format YAML files with Prettier'
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
-
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   build_and_deploy_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
