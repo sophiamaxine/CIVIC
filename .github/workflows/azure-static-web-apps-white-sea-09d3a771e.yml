@@ -25,15 +25,15 @@ jobs:
           node-version: '14'
 
       - name: Change directory
-        run: cd app
+        run: cd .prettierrc
 
       - name: Install dependencies
         run: npm install
-        working-directory: app
+        working-directory: .prettierrc
 
       - name: Run tests
         run: npm test
-        working-directory: app
+        working-directory: .prettierrc
 
   build:
     runs-on: ubuntu-latest
