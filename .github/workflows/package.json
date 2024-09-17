@@ -1,11 +1,15 @@
 {
-  "name": "CIVIC",
+  "name": "my-project",
   "version": "1.0.0",
   "scripts": {
-    "test": "echo 'Running tests...' && exit 0",  // Replace with actual test command
-    "build": "echo 'Building project...' && exit 0"  // Replace with actual build command
+    "test": "echo 'Running tests...' && exit 0",  // Replace with your actual test command
+    "build": "echo 'Building project...' && exit 0"  // Replace with your actual build command
   },
   "dependencies": {
-    // List your dependencies here
+    "html-minifier-terser": "^6.0.0",  // Minifies HTML
+    "clean-css": "^5.2.0"               // Minifies CSS
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1"  // Code formatter for HTML/CSS
   }
 }
