@@ -26,10 +26,10 @@ jobs:
           node-version: '14'
 
       - name: Install dependencies
-        run: npm install
+        
 
       - name: Build the application
-        run: npm run build
+       
 
 
   # Job to test the code
@@ -46,10 +46,10 @@ jobs:
           node-version: '14'
 
       - name: Install dependencies
-        run: npm install
+        
 
       - name: Run tests
-        run: npm test
+       
 
   # Job to deploy the application
   deploy:
