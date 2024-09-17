@@ -1,3 +1,13 @@
-"scripts": {
-  "test": "jest"  // Or the command you use for testing
+{
+  "scripts": {
+    "test": "jest",  // Replace with your test framework
+    "build": "webpack",  // Replace with your build tool
+    "deploy": "your-deploy-command"  // Optional if needed for local deployments
+  },
+  "devDependencies": {
+    "jest": "^27.0.0"  // Example testing dependency
+  },
+  "dependencies": {
+    "react": "^17.0.0"  // Example application dependency
+  }
 }
