@@ -44,3 +44,24 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_WHITE_SEA_09D3A771E }}
           action: "close"
+
+  format:
+    runs-on: ubuntu-latest
+    name: Format YAML with Prettier
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install Prettier
+        run: npm install -g prettier
+      - name: Format YAML files
+        run: prettier --write '**/*.yml'
+      - name: Commit formatted YAML files
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: '**/*.yml'
+          message: 'fix: format YAML files with Prettier'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
