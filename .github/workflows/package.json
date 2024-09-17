@@ -2,9 +2,9 @@
   "name": "my-project",
   "version": "1.0.0",
   "scripts": {
-    "test": "echo 'Running tests...' && exit 0",  // Replace with your actual test command
-    "build": "echo 'Building project...' && exit 0"  // Replace with your actual build command
-  },
+  "build": "webpack",  // Adjust based on your build tool
+  "test": "jest"       // Adjust based on your testing framework
+}
   "dependencies": {
     "html-minifier-terser": "^6.0.0",  // Minifies HTML
     "clean-css": "^5.2.0"               // Minifies CSS
