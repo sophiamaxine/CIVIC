@@ -24,16 +24,13 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Change directory
-        run: cd .prettierrc
-
       - name: Install dependencies
         run: npm install
-        working-directory: .prettierrc
+        working-directory: ./.prettier
 
       - name: Run tests
         run: npm test
-        working-directory: .prettierrc
+        working-directory: ./.prettier
 
   build:
     runs-on: ubuntu-latest
@@ -47,16 +44,9 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Change directory
-        run: cd app
-
-      - name: Install dependencies
-        run: npm install
-        working-directory: app
-
       - name: Build the application
         run: npm run build
-        working-directory: app
+        working-directory: ./.prettier
 
   deploy:
     runs-on: ubuntu-latest
@@ -70,12 +60,9 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Change directory
-        run: cd app
-
       - name: Build the application (for deployment)
         run: npm run build
-        working-directory: app
+        working-directory: ./.prettier
 
       - name: Deploy to Azure Static Web Apps
         uses: Azure/static-web-apps-deploy@v1
