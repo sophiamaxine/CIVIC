@@ -1,4 +1,4 @@
-name: Azure Static Web Apps CI/CD
+name: Node.js CI
 
 on:
   push:
@@ -7,10 +7,6 @@ on:
   pull_request:
     branches:
       - main
-
-permissions:
-  contents: write
-  actions: write
 
 jobs:
   tests:
@@ -33,28 +29,3 @@ jobs:
 
       - name: Run tests
         run: npm test
-
-  build_and_deploy_job:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: List directory contents
-        run: ls -la
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '14'
-
-      - name: Build and Deploy
-        uses: Azure/static-web-apps-deploy@v1
-        with:
-          azure_static_web_apps_api_token: ${{ secrets.PAT_TOKEN }}
-          repo_token: ${{ secrets.PAT_TOKEN }}
-          action: 'upload'
-          app_location: '/'  # Adjust if necessary
-          api_location: 'api'  # Adjust if necessary
-          output_location: 'build'  # Adjust if necessary
