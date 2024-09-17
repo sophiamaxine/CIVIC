@@ -26,9 +26,11 @@ jobs:
           node-version: '14'
 
       - name: Install dependencies
+        working-directory: .github/workflows  # Set the working directory where package.json is located
         run: npm install
 
       - name: Run tests
+        working-directory: .github/workflows  # Set the working directory where package.json is located
         run: npm test
 
   build_and_deploy_job:
@@ -44,9 +46,11 @@ jobs:
           node-version: '14'
 
       - name: Install dependencies
+        working-directory: .github/workflows  # Set the working directory where package.json is located
         run: npm install
-      
+
       - name: Build
+        working-directory: .github/workflows  # Set the working directory where package.json is located
         run: npm run build  # Ensure you have a build script in your package.json
 
       - name: Build and Deploy
