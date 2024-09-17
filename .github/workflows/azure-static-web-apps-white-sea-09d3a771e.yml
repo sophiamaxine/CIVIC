@@ -1,5 +1,5 @@
 name: Azure Static Web Apps CI/CD
-
+ 
 on:
   push:
     branches:
@@ -8,9 +8,10 @@ on:
     types: [opened, synchronize, reopened, closed]
     branches:
       - main
+ 
 permissions:
   contents: write
-
+  checks: write
 
 
 jobs:
